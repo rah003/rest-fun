@@ -1,0 +1,110 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd ">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>info.magnolia.maven.poms-forge</groupId>
+    <artifactId>magnolia-parent-pom-forge</artifactId>
+    <version>30</version>
+  </parent>
+
+  <groupId>preso.rest.fun</groupId>
+  <artifactId>rest-fun</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <name>rest-fun Magnolia Module</name>
+  <!--
+    Please uncomment and fill in, or remove, the following.
+    The license below is not linked to any checkstyle or other check which would validate the source files or the packaging,
+    nor influence the generated README.txt file.
+    If you wanted to enforce a license header in source files, you can set the <checkstyleHeader> property.
+  <description>... please fill in this description ...</description>
+  <inceptionYear>...</inceptionYear>
+  <organization>
+    <name>...</name>
+    <url>...</url>
+  </organization>
+
+  <developers>
+    <developer>
+      <id>...</id>
+      <name>...</name>
+    </developer>
+    ...
+  </developers>
+  <contributors>
+    ... add as needed...
+  </contributors>
+
+  <licenses>
+    <license>
+      <name>...</name>
+      <url>...</url>
+    </license>
+  </licenses>
+  -->
+
+  <properties>
+    <magnoliaVersion>5.4-SNAPSHOT</magnoliaVersion>
+    <javaVersion>1.7</javaVersion>
+  </properties>
+
+  <!-- Please double-check these URLs -->
+  <scm>
+    <connection>scm:git:http://git.magnolia-cms.com/forge/rest-fun</connection>
+    <developerConnection>scm:git:https://git.magnolia-cms.com/forge/rest-fun</developerConnection>
+    <url>http://git.magnolia-cms.com/gitweb/?p=forge/rest-fun</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <dependencies>
+    <dependency>
+      <groupId>info.magnolia.ui</groupId>
+      <artifactId>magnolia-ui-api</artifactId>
+      <version>${magnoliaVersion}</version>
+    </dependency>
+    <dependency>
+      <groupId>info.magnolia.ui</groupId>
+      <artifactId>magnolia-ui-form</artifactId>
+      <version>${magnoliaVersion}</version>
+    </dependency>
+    <dependency>
+      <groupId>info.magnolia.ui</groupId>
+      <artifactId>magnolia-ui-framework</artifactId>
+      <version>${magnoliaVersion}</version>
+    </dependency>
+    <dependency>
+      <groupId>info.magnolia.restclient</groupId>
+      <artifactId>magnolia-rest-client</artifactId>
+      <version>1.0.4-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>info.magnolia.restclient</groupId>
+      <artifactId>magnolia-resteasy-client</artifactId>
+      <version>1.0.4-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>info.magnolia</groupId>
+      <artifactId>magnolia-core</artifactId>
+      <version>${magnoliaVersion}</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <!-- enable this if your module needs assembly (packaged with its scope:compile dependencies)
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+      </plugin>
+      -->
+    </plugins>
+  </build>
+
+</project>
